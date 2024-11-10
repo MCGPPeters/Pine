@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Counter.Web.Browser.props" />
+</Project>

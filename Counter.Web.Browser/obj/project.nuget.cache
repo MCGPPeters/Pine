@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "PIBa7hB3I7A=",
+  "success": true,
+  "projectFilePath": "d:\\Pine\\Counter.Web.Browser\\Counter.Web.Browser.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Maurice\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.0-rc.2.24473.5\\microsoft.net.illink.tasks.9.0.0-rc.2.24473.5.nupkg.sha512",
+    "C:\\Users\\Maurice\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\9.0.0-rc.2.24473.5\\microsoft.net.sdk.webassembly.pack.9.0.0-rc.2.24473.5.nupkg.sha512"
+  ],
+  "logs": []
+}

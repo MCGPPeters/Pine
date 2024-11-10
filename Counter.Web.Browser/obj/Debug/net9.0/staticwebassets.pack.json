@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "d:\\Pine\\Counter.Web.Browser\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "d:\\Pine\\Counter.Web.Browser\\wwwroot\\pine.js",
+      "PackagePath": "staticwebassets\\pine.js"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.Counter.Web.Browser.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.Counter.Web.Browser.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.Counter.Web.Browser.props",
+      "PackagePath": "build\\Counter.Web.Browser.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.Counter.Web.Browser.props",
+      "PackagePath": "buildMultiTargeting\\Counter.Web.Browser.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.Counter.Web.Browser.props",
+      "PackagePath": "buildTransitive\\Counter.Web.Browser.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

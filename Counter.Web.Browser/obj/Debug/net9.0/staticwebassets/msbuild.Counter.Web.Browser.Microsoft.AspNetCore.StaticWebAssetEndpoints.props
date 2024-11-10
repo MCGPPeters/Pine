@@ -1,0 +1,28 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="index.2ne2r3pxn8.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"2ne2r3pxn8"},{"Name":"integrity","Value":"sha256-YpKEz29Cfu27QWrLg0/\u002BJJV7haCcgAP3pLQaFN14htc="},{"Name":"label","Value":"index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"253"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022YpKEz29Cfu27QWrLg0/\u002BJJV7haCcgAP3pLQaFN14htc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 09 Nov 2024 19:53:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="index.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-YpKEz29Cfu27QWrLg0/\u002BJJV7haCcgAP3pLQaFN14htc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"253"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022YpKEz29Cfu27QWrLg0/\u002BJJV7haCcgAP3pLQaFN14htc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 09 Nov 2024 19:53:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="pine.5zrbfz58mx.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pine.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"5zrbfz58mx"},{"Name":"integrity","Value":"sha256-YY20ab4NkupFtjgwCBuqWOnT4rGEaPaCgVf6024LxBc="},{"Name":"label","Value":"pine.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6289"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022YY20ab4NkupFtjgwCBuqWOnT4rGEaPaCgVf6024LxBc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 09 Nov 2024 19:49:50 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="pine.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pine.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-YY20ab4NkupFtjgwCBuqWOnT4rGEaPaCgVf6024LxBc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6289"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022YY20ab4NkupFtjgwCBuqWOnT4rGEaPaCgVf6024LxBc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 09 Nov 2024 19:49:50 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>
