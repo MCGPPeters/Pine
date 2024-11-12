@@ -13,25 +13,25 @@ public record CounterComponent : Component<CounterComponent, Model, Command>
     }
 
     public override Node View(Model state) =>
-        div(new Id(0), [],
+        div([],
         [
-            button(new Id(1), 
+            button(
             [
                 new Property { Name = "type", Value = "button" },
                 onclick(new Increment())
             ],
             [
-                text(new Id(2), "+")
+                text("+")
             ]),
 
-            button(new Id(3), [
+            button([
                 new Property { Name = "type", Value = "button" },
                 onclick(new Decrement())
             ], 
             [
-                text(new Id(4), "-")
+                text("-")
             ]),
-            text(new Id(5), state.Counter.ToString())
+            text(state.Counter.ToString())
 
         ]);
 
@@ -49,7 +49,7 @@ public record CounterComponent : Component<CounterComponent, Model, Command>
 public partial class App
 {
 
-    private static CounterComponent _application = new(new Model(0)){ Id = "1000" };
+    private static CounterComponent _application = new(new Model(0)){ Id = "1000", Tag = "" };
 
     [JSExport]
     public static async Task Dispatch(string commandId)

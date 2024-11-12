@@ -19,6 +19,8 @@ public abstract record Component<TComponent, TState, TCommand> : Component
     protected abstract TState Update(TState state, TCommand command);
     public abstract Node View(TState state);
 
+    public required string Tag { get; init; } = nameof(TComponent).ToLower();
+
     public required string Id { get; init; }
     public TState State { get; private set;}
 

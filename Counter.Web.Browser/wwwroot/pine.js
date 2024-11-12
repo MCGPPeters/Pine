@@ -4,9 +4,53 @@ import { dotnet } from './_framework/dotnet.js';
 
 const { setModuleImports, getAssemblyExports, getConfig, runMain } = await dotnet
     .withDiagnosticTracing(true)
+    .withConfig({
+        environmentVariables: {
+            "MONO_LOG_LEVEL": "debug", //enable Mono VM detailed logging by
+            "MONO_LOG_MASK": "all", // categories, could be also gc,aot,type,...
+        }
+    })
     .create();
 
+/**
+ * Adds event listeners to the document body for interactive elements.
+ */
+function addEventListeners() {
+    // Remove existing event listeners to prevent duplicates
+    document.body.removeEventListener('click', eventHandler);
+    document.body.addEventListener('click', eventHandler);
+    console.log("Event listeners attached.");
+}
+
+/**
+ * Event handler for click events on elements with data-event-* attributes.
+ * @param {Event} event - The DOM event.
+ */
+function eventHandler(event) {
+    const target = event.target.closest('[data-event-onclick]');
+    console.log(`Event target: ${target}`);
+    if (target) {
+        const commandId = target.getAttribute('data-event-onclick');
+        console.log(`Dispatching command ${commandId}`);
+        if (commandId) {
+            exports.Counter.Web.Browser.App.Dispatch(commandId);
+            event.preventDefault();
+        } else {
+            console.error("No command id found in data-event-click attribute.");
+        }
+    }
+}
+
 setModuleImports('pine.js', {
+
+    /**
+     * Gets the app element
+     * @returns {HTMLElement} The app element.
+    * */
+    getAppElement: () => {
+        return document.getElementById('app');
+    },
+
     /**
      * Adds a child element to a parent element in the DOM using HTML content.
      * @param {number} parentId - The ID of the parent element.
@@ -124,32 +168,6 @@ setModuleImports('pine.js', {
         }
     },
 
-    /**
-     * Adds event listeners to the document body for interactive elements.
-     */
-    addEventListeners : () =>  {
-        // Remove existing event listeners to prevent duplicates
-        document.body.removeEventListener('click', eventHandler);
-        document.body.addEventListener('click', eventHandler);
-    },
-
-    /**
-     * Event handler for click events on elements with data-event-* attributes.
-     * @param {Event} event - The DOM event.
-     */
-    eventHandler : (event) => {
-        const target = event.target.closest('[data-event-click]');
-        if (target) {
-            const commandJson = target.getAttribute('data-event-click');
-            if (commandJson) {
-                exports.Pine.Dispatch(commandJson);
-                event.preventDefault();
-            } else {
-                console.error("No command found in data-event-click attribute.");
-            }
-        }
-    },
-
     // Expose functions to .NET via JS interop (if needed)
     getCurrentUrl : () => {
         return window.location.href;
@@ -171,6 +189,6 @@ const exports = await getAssemblyExports(config.mainAssemblyName);
 await runMain(); // Ensure the .NET runtime is initialized
 
 // Start the .NET application
-exports.App.Start();
+await exports.Counter.Web.Browser.App.Start();
 
 
