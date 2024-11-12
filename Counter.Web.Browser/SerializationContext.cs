@@ -1,5 +1,7 @@
 using System.Text.Json.Serialization;
 
+namespace Counter.Web.Browser;
+
 [JsonSourceGenerationOptions(
     PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase,
     WriteIndented = false)]

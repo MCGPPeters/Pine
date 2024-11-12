@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Counter.Web.Browser",
   "resources": {
-    "hash": "sha256-B4x9dGcfbVAjI9sfbVEzbqcWM9CaptMVW8RGMCA3kag=",
+    "hash": "sha256-/zcgjUvy1tfs3jverF+lt4G2Jrn4Yi6KO5nL+gQOw9E=",
     "fingerprinting": {
       "Microsoft.CSharp.3m6l03ft64.wasm": "Microsoft.CSharp.wasm",
       "Microsoft.VisualBasic.Core.96hfqrav27.wasm": "Microsoft.VisualBasic.Core.wasm",
@@ -179,8 +179,8 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "Counter.Web.Browser.f69a9vv7h8.wasm": "Counter.Web.Browser.wasm",
-      "Counter.Web.Browser.j8yjjgiu2n.pdb": "Counter.Web.Browser.pdb"
+      "Counter.Web.Browser.bwg37h9uj4.wasm": "Counter.Web.Browser.wasm",
+      "Counter.Web.Browser.vs6ps2ik59.pdb": "Counter.Web.Browser.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.hjjnedf5fu.js": "sha256-U+stuE7IXlmMsJFTTp8538F7skLX5I4FvQ0jxOfFg6Y="
@@ -368,10 +368,10 @@
       "WindowsBase.duw8tye9rc.wasm": "sha256-u4J6B4QZKaz/MboN/YWyKwBK5G4bSw6uQjiZ+g/saZs=",
       "mscorlib.ojm2nv3phn.wasm": "sha256-pKFHSgZnZyVtsRPI7nTtia0qocy8F4DUZumTdcGJ6KM=",
       "netstandard.25748u4t1d.wasm": "sha256-2kIiN/gxZXm71QytM9H9+rCtWVkg1CoDm1LxpsQA4CY=",
-      "Counter.Web.Browser.f69a9vv7h8.wasm": "sha256-CX7wSjHjGYawMifnIqHXxwBC8JLEcrH1b+i+aHkVvPU="
+      "Counter.Web.Browser.bwg37h9uj4.wasm": "sha256-tSyv/m5PsjHqT/DsWqptS98Qf4nKN34pdgZuy6cwlTk="
     },
     "pdb": {
-      "Counter.Web.Browser.j8yjjgiu2n.pdb": "sha256-EwdIoVhEWMwdYo9QuyOTBHkubPmlNhJks6kk2dkY6mo="
+      "Counter.Web.Browser.vs6ps2ik59.pdb": "sha256-r/JplE3HlHxAdkB8pgu2nvbIQ34mwslztLstQeptkN0="
     }
   },
   "cacheBootResources": true,

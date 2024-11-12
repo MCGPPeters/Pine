@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Pine\\Counter.Web.Browser\\Counter.Web.Browser.csproj": {}
+    "D:\\Pine\\Counter.Web.Browser\\Counter.Web.Browser.csproj": {}
   },
   "projects": {
-    "d:\\Pine\\Counter.Web.Browser\\Counter.Web.Browser.csproj": {
+    "D:\\Pine\\Counter.Web.Browser\\Counter.Web.Browser.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Pine\\Counter.Web.Browser\\Counter.Web.Browser.csproj",
+        "projectUniqueName": "D:\\Pine\\Counter.Web.Browser\\Counter.Web.Browser.csproj",
         "projectName": "Counter.Web.Browser",
-        "projectPath": "d:\\Pine\\Counter.Web.Browser\\Counter.Web.Browser.csproj",
+        "projectPath": "D:\\Pine\\Counter.Web.Browser\\Counter.Web.Browser.csproj",
         "packagesPath": "C:\\Users\\Maurice\\.nuget\\packages\\",
-        "outputPath": "d:\\Pine\\Counter.Web.Browser\\obj\\",
+        "outputPath": "D:\\Pine\\Counter.Web.Browser\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Maurice\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
