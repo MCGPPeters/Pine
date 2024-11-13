@@ -5,7 +5,7 @@ namespace Counter.Web.Browser;
 [JsonSourceGenerationOptions(
     PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase,
     WriteIndented = false)]
-[JsonSerializable(typeof(Command))]
+[JsonSerializable(typeof(CounterCommand))]
 public partial class SerializationContext: JsonSerializerContext
 {
 }

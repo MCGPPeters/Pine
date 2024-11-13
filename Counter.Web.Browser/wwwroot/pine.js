@@ -19,7 +19,6 @@ function addEventListeners() {
     // Remove existing event listeners to prevent duplicates
     document.body.removeEventListener('click', eventHandler);
     document.body.addEventListener('click', eventHandler);
-    console.log("Event listeners attached.");
 }
 
 /**
@@ -33,7 +32,7 @@ function eventHandler(event) {
         const commandId = target.getAttribute('data-event-onclick');
         console.log(`Dispatching command ${commandId}`);
         if (commandId) {
-            exports.Counter.Web.Browser.App.Dispatch(commandId);
+            exports.Counter.Web.Browser.Runtime.Dispatch(commandId);
             event.preventDefault();
         } else {
             console.error("No command id found in data-event-click attribute.");
@@ -56,7 +55,7 @@ setModuleImports('pine.js', {
      * @param {number} parentId - The ID of the parent element.
      * @param {string} childHtml - The HTML string of the child element to add.
      */
-    addChildHtml : (parentId, childHtml) => {
+    addChildHtml: async (parentId, childHtml) => {
         const parent = document.getElementById(parentId);
         if (parent) {
             const tempDiv = document.createElement('div');
@@ -74,7 +73,7 @@ setModuleImports('pine.js', {
      * @param {number} parentId - The ID of the parent element.
      * @param {number} childId - The ID of the child element to remove.
      */
-    removeChild : (parentId, childId) =>  {
+    removeChild: async (parentId, childId) =>  {
         const parent = document.getElementById(parentId);
         const child = document.getElementById(childId);
         if (parent && child && parent.contains(child)) {
@@ -89,7 +88,7 @@ setModuleImports('pine.js', {
      * @param {number} oldNodeId - The ID of the node to replace.
      * @param {string} newHtml - The HTML string to replace with.
      */
-    replaceChildHtml : (oldNodeId, newHtml) => {
+    replaceChildHtml: async (oldNodeId, newHtml) => {
         const oldNode = document.getElementById(oldNodeId);
         if (oldNode && oldNode.parentNode) {
             const tempDiv = document.createElement('div');
@@ -107,7 +106,7 @@ setModuleImports('pine.js', {
      * @param {number} nodeId - The ID of the node to update.
      * @param {string} newText - The new text content.
      */
-    updateTextContent : (nodeId, newText) => {
+    updateTextContent: async (nodeId, newText) => {
         const node = document.getElementById(nodeId);
         if (node) {
             node.textContent = newText;
@@ -122,7 +121,7 @@ setModuleImports('pine.js', {
      * @param {string} propertyName - The name of the attribute/property.
      * @param {string} propertyValue - The new value for the attribute/property.
      */
-    updateAttribute : (nodeId, propertyName, propertyValue) => {
+    updateAttribute: async (nodeId, propertyName, propertyValue) => {
         const node = document.getElementById(nodeId);
         if (node) {
             node.setAttribute(propertyName, propertyValue);
@@ -131,7 +130,7 @@ setModuleImports('pine.js', {
         }
     },
 
-    addAttribute : (nodeId, propertyName, propertyValue) => {
+    addAttribute: async (nodeId, propertyName, propertyValue) => {
         const node = document.getElementById(nodeId);
         if (node) {
             node.setAttribute(propertyName, propertyValue);
@@ -145,7 +144,7 @@ setModuleImports('pine.js', {
      * @param {number} nodeId - The ID of the node to update.
      * @param {string} propertyName - The name of the attribute/property to remove.
      */
-    removeAttribute : (nodeId, propertyName) =>{
+    removeAttribute: async (nodeId, propertyName) =>{
         const node = document.getElementById(nodeId);
         if (node) {
             node.removeAttribute(propertyName);
@@ -158,7 +157,7 @@ setModuleImports('pine.js', {
      * Sets the inner HTML of the 'app' div.
      * @param {string} html - The HTML content to set.
      */
-    setAppContent : (html) => {
+    setAppContent: async (html) => {
         const appDiv = document.getElementById('app');
         if (appDiv) {
             appDiv.innerHTML = html;
@@ -169,16 +168,16 @@ setModuleImports('pine.js', {
     },
 
     // Expose functions to .NET via JS interop (if needed)
-    getCurrentUrl : () => {
+    getCurrentUrl: async () => {
         return window.location.href;
     },
 
-    navigateTo : (url) => {
+    navigateTo: async (url) => {
         history.pushState(null, "", url);
         window.dispatchEvent(new Event("popstate"));
     },
 
-    onUrlChange : (callback) => {
+    onUrlChange: async (callback) => {
         window.addEventListener("popstate", () => callback(getCurrentUrl()));
     }
 });
@@ -189,6 +188,6 @@ const exports = await getAssemblyExports(config.mainAssemblyName);
 await runMain(); // Ensure the .NET runtime is initialized
 
 // Start the .NET application
-await exports.Counter.Web.Browser.App.Start();
+await exports.Counter.Web.Browser.Runtime.Start();
 
 
